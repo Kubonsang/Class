@@ -66,7 +66,6 @@ namespace Class.StateMachine
             SetupChair();
             SetupPlayerPosition();
             AdjustCameraPosition();
-            controller.transform.Rotate(new Vector3(0f, 0f, 0f), Space.World);
             OriginalMaxVertRotation = controller.MaxVertRot;
             controller.MaxVertRot = 65f;
         }

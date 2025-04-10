@@ -13,8 +13,13 @@ public class InFrontOfLectern : ISmileMan
     private PlayerController player;
     private LecternManager lecternManager;
     #endregion
-    
-    
+
+
+    private void Awake()
+    {
+        SetAnimator();
+    }
+
     private void Update()
     {
         HandleGameOver();

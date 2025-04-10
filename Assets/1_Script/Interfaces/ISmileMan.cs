@@ -3,10 +3,19 @@ using UnityEngine;
 
 namespace Class
 {
+    
+    [RequireComponent(typeof(Animator))]
     public abstract class ISmileMan : MonoBehaviour
     {
         public bool IsGameOver { get; protected set; } = false;
 
+        protected Animator animator;
+
+        protected int idleHash;
+        protected int walkHash;
+        protected int jumpHash;
+        
+        
         public bool IsGameOverActivated
         {
             get => isGameOverActivated;
@@ -27,6 +36,22 @@ namespace Class
         {
             GameManagerEx.Instance.Controller.thismanState.ThismanTransform = transform; 
             isGameOverActivated = true;
+            
+            animator.CrossFade(jumpHash, 0.3f);
         }
+
+        public virtual void SetAnimator()
+        {
+            animator = GetComponent<Animator>();
+            idleHash = Animator.StringToHash("Idle");
+            walkHash = Animator.StringToHash("Walk");
+            jumpHash = Animator.StringToHash("Jump");
+        }
+
+        protected virtual void HandleAnimation()
+        {
+            
+        }
+        
     }
 }

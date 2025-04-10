@@ -293,7 +293,7 @@ namespace Class
         }
         private IEnumerator TransitionScene(SceneEnums sceneEnum)
         {
-            yield return StartCoroutine(screenBlocker.FadeInCoroutine(1.0f));
+            yield return StartCoroutine(screenBlocker.FadeInCoroutine(0.5f));
             UnityEngine.AsyncOperation async = SceneManager.LoadSceneAsync(Enum.GetName(typeof(SceneEnums), sceneEnum));
             yield return async;
             yield return StartCoroutine(screenBlocker.FadeOutCoroutine(0.5f));
