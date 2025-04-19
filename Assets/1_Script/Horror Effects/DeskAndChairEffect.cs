@@ -43,6 +43,7 @@ public class DeskAndChairEffect : HorrorEffect
     #region Unity Methods
     private void Start()
     {
+        stageInfo = 0;
         InitializeParents();
         InitializeArrays();
         SelectTargetProps();

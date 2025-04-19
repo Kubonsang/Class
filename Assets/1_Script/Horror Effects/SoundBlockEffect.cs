@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Class
@@ -45,5 +46,12 @@ namespace Class
             GameManagerEx.Instance.TurnOnOffTV(false);
         }
         #endregion
+
+        private void Start()
+        {
+            stageInfo = 0;    
+        }
+        
+        
     }
 }

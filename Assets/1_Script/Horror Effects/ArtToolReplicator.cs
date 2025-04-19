@@ -30,6 +30,7 @@ public class ArtToolReplicator : HorrorEffect
     #region Unity Methods
     private void Start()
     {
+        stageInfo = 1;
         InitializeParents();
     }
     #endregion

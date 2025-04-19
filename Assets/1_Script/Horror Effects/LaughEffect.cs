@@ -1,3 +1,4 @@
+using System;
 using Class;
 
 namespace Class
@@ -13,6 +14,11 @@ namespace Class
         {
             SoundManager.Instance.CreateAudioSource(transform.position, SfxClipTypes.Thisman_Laugh, 1.0f);
             GameManagerEx.Instance.IncreaseThismanSpawnProbability();
+        }
+
+        private void Start()
+        {
+            stageInfo = 0;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -104,5 +105,10 @@ namespace Class
             }
         }
         #endregion
+
+        private void Start()
+        {
+            stageInfo = 0;
+        }
     }
 }

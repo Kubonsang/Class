@@ -19,6 +19,7 @@ public class BreakMirrorEffect : HorrorEffect
     #region Unity Methods
     private void Start()
     {
+        stageInfo = 1;
         InitializeControllers();
     }
     #endregion

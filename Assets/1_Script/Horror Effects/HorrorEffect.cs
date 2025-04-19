@@ -14,6 +14,8 @@ namespace Class
         /// 이펙트 매니저에서 프리팹을 가져올 때 참조됩니다.
         /// </summary>
         public abstract EffectTypes EffectType { get; }
+
+        public int stageInfo;
         #endregion
 
         #region Unity Methods

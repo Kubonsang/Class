@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Class 
@@ -16,6 +17,12 @@ namespace Class
         [Header("Effect Settings")]
         [SerializeField] private float duration;
         #endregion
+
+        private void Start()
+        {
+            stageInfo = 0;
+        }
+
 
         #region Public Methods
         /// <summary>

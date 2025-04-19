@@ -35,6 +35,7 @@ public class ApproachingWall : HorrorEffect
     #region Unity Methods
     private void Start()
     {
+        stageInfo = 0;
         InitializeWalls();
     }
     #endregion
